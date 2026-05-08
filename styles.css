@@ -14,6 +14,17 @@
     color: rgb(64, 37, 77);
     background-color: rgb(149, 105, 175);
     border: 15px solid rgb(132, 82, 161);
+
+    animation-duration: 1.5s;
+    animation-name: floatIn;
+}
+@keyframes floatIn{
+    0%{
+        scale: 0.85;
+    }
+    100%{
+        scale: 1;
+    }
 }
 #desc1{
     height: 5vw;
