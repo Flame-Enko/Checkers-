@@ -1,7 +1,7 @@
 #content{
-    width: 98vw;
-    height: 50vw;
-    background-color: rgb(127, 110, 141);
+    width: 100%;
+    height: 950px;
+    background: linear-gradient(180deg, rgb(103, 76, 146) 0%, rgb(51, 40, 97) 100%);
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -12,17 +12,18 @@
     height: 9vw;
     font-size: 6vw;
     color: rgb(64, 37, 77);
-    background-color: rgb(149, 105, 175);
-    border: 15px solid rgb(132, 82, 161);
-
+    background: linear-gradient(180deg, rgb(149, 105, 175) 0%, rgb(101, 81, 139) 100%);
+    border: 15px solid rgb(80, 50, 119);
     animation-duration: 1.5s;
-    animation-name: floatIn;
+    animation-name: floatInHeader;
 }
-@keyframes floatIn{
-    0%{
+@keyframes floatInHeader{
+    from{
+        transform:translateY(-100px);
         scale: 0.85;
     }
-    100%{
+    to{
+        transform:translateY(0px);
         scale: 1;
     }
 }
@@ -32,27 +33,190 @@
     color: rgb(30, 2, 39);
     border: 30px solid transparent;
 }
-.button{
-    width: 11vw;
-    font-size: 3.3vw;
-    height: 4.5vw;
-    background-color: #c385d3;
+.buttonMenu{
+    width: 175px;
+    font-size: 50px;
+    background: linear-gradient(180deg, #c385d3 0%, #8c5899 100%);
     color: #794a85;
     margin-left: auto;
     margin-right: auto;
-    border: 1vw solid rgb(117, 72, 153);
-    margin-bottom: 75px;
+    border: 15px solid rgb(72, 42, 97);
+    margin-bottom: 65px;
     margin-top: 30px;
     border-radius: 15px;
+    user-select: none;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
-.button:hover{
-    background-color: #e785ff;
-    color: rgb(180, 89, 255);
-    border-color: rgb(107, 67, 139);
+.buttonMenu:hover{
+    background: linear-gradient(180deg, #dd9aee 0%, #ad74bb 100%);
+    color: rgb(228, 138, 255);
+    border-color: rgb(62, 36, 83);
+    transform: translateY(-1px);
+    cursor: pointer;
 }
 #desc2{
     display: none;
+    background-color: rgb(149, 105, 175);
+
 }
 .playtime{
     display: none;
 }
+#play{
+    animation-duration: 1.6s;
+    animation-name: floatInPlay;
+}
+@keyframes floatInPlay{
+    0%{
+        transform: translateX(-250px);
+        scale: 0.9;
+    }
+    100%{
+        transform: translateX(0px);
+        scale: 1;
+    }
+}
+#info{
+    animation-duration: 1.7s;
+    animation-name: floatInInfo;
+}
+@keyframes floatInInfo{
+    0%{
+        transform: translateX(250px);
+        scale: 0.9;
+    }
+    100%{
+        transform: translateX(0px);
+        scale: 1;
+    }
+}
+#back{
+    display: none;
+}
+        #status {
+            margin-bottom: 18px;
+            font-size: 18px;
+            color: #372c42;
+            padding: 14px 18px;
+            background: rgba(250, 242, 255, 0.88);
+            border: 1px solid rgba(55, 44, 66, 0.12);
+            box-shadow: 0 10px 24px rgba(18, 8, 33, 0.05);
+        }
+
+        #board-wrapper {
+            padding: 18px;
+            background: #120c1f;
+            border: 2px solid #1b1226;
+            border-radius: 20px;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 0 12px 24px rgba(19, 37, 82, 0.08);
+            display: inline-block;
+        }
+
+        #board {
+            display: grid;
+            grid-template-columns: repeat(8, 64px);
+            gap: 0;
+            width: 512px;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .square {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.16s ease, box-shadow 0.16s ease;
+        }
+
+        .square:hover {
+            transform: translateY(-1px);
+        }
+
+        .square.light { background: #f4e7c5; }
+        .square.dark { background: #89633e; }
+
+        .square.selected {
+            box-shadow: inset 0 0 0 3px rgba(44, 72, 165, 0.9);
+        }
+
+        .square.move {
+            box-shadow: inset 0 0 0 4px rgba(60, 220, 76, 0.95), 0 0 0 1px rgba(60, 220, 76, 0.45);
+            background: rgba(80, 255, 120, 0.12);
+        }
+
+        .piece {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            position: relative;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.16);
+            transition: transform 0.14s ease, filter 0.14s ease;
+        }
+
+        .piece.white {
+            background: radial-gradient(circle at top left, #ffffff 0%, #f0f0f0 65%, #dcdcdc 100%);
+            border: 2px solid #a9a9a9;
+            color: #222;
+        }
+
+        .piece.black {
+            background: radial-gradient(circle at top left, #444444 0%, #222222 55%, #101010 100%);
+            border: 2px solid #111;
+            color: #fff;
+        }
+
+        .piece:hover {
+            transform: scale(1.04);
+        }
+
+        .piece.king::after {
+            content: "♛";
+            position: absolute;
+            top: 2px;
+            right: 4px;
+            font-size: 16px;
+            color: rgba(255, 223, 96, 0.95);
+            text-shadow: 0 0 2px rgba(0,0,0,0.35);
+        }
+
+        #controls {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #resetBtn {
+            width: 250px;
+            font-size: 50px;
+            border-radius: 15px;
+            border: 15px solid rgb(65, 40, 79);
+            background: linear-gradient(180deg, #fee8fe 0%, #eeb7f5 100%);
+            color: #3a1f3f;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            margin-left: 35px;
+        }
+
+        #resetBtn:hover {
+            background: linear-gradient(180deg, #eac7ff 0%, #d999f2 100%);
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 12px; }
+            #board { grid-template-columns: repeat(8, 48px); width: 384px; }
+            .square { width: 48px; height: 48px; }
+            .piece { width: 36px; height: 36px; font-size: 18px; }
+        }

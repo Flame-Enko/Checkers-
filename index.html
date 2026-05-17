@@ -10,14 +10,23 @@
     <div id="content">
 
     <div id="header" class="intro">Witamy w Super Checkers!</div>
-    <div id="desc1" class="intro">(short description of this website)</div>
-    <div id="play" class="button" class="intro" onclick="play()">zagrać</div>
-    <div id="info" class="button" class="intro" onclick="info()">info</div>
-    <div id="desc2" class="intro">(rules, about cosmetics, about us)</div>
+    <div id="desc1" class="intro">Łatwa i szybka gra w warcaby na jednem komputerze.</div>
+    <div id="play" class="buttonMenu" class="intro" onclick="play()">zagrać</div>
+    <div id="info" class="buttonMenu" class="intro" onclick="info()">info</div>
+    <div id="desc2">(rules, about cosmetics, about us)</div>
 
-    <div id="arena" class="playtime"></div>
-    
+    <div id="arena" class="playtime">
+        <div id="status"></div>
+        <div id="board-wrapper">
+            <div id="board"></div>
+        </div>
+        <div id="controls">
+            <div id="resetBtn">resetować</div>
+        </div>
     </div>
+    <div id="back" class="buttonMenu" class="playtime" onclick="back()">cofnąć</div>
+    </div>
+   
     <script src="script.js"></script>
 </body>
 </html>
