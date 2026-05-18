@@ -9,8 +9,10 @@
 
 }
 #header{
-    height: 9vw;
-    font-size: 6vw;
+    padding-top: 40px;
+    user-select: none;
+    height: 170px;
+    font-size: 100px;
     color: rgb(64, 37, 77);
     background: linear-gradient(180deg, rgb(149, 105, 175) 0%, rgb(101, 81, 139) 100%);
     border: 15px solid rgb(80, 50, 119);
@@ -28,8 +30,8 @@
     }
 }
 #desc1{
-    height: 5vw;
-    font-size: 1.5vw;
+    height: 50px;
+    font-size: 15px;
     color: rgb(30, 2, 39);
     border: 30px solid transparent;
 }
@@ -54,10 +56,58 @@
     transform: translateY(-1px);
     cursor: pointer;
 }
-#desc2{
+#buttons{
+    position: absolute;
+    margin-left: 44.35%;
+    margin-right: auto;
+    float: left;
+}
+.descInfo{
+    user-select: none;
+    text-align: center;
+    padding: 20px;
+    width: 400px;
+    height: 560px;
     display: none;
-    background-color: rgb(149, 105, 175);
-
+    background: linear-gradient(180deg, rgb(151, 105, 182) 0%, rgb(45, 40, 94) 100%);
+}
+.descContent{
+    font-size: 20px;
+}
+.descInfo:hover{
+    cursor: pointer;
+    background: linear-gradient(180deg, rgb(115, 78, 139) 0%, rgb(32, 28, 68) 100%);
+}
+i{
+    color: #222222;
+}
+#gameDesc{
+    animation: floatInGameDesc 1.3s forwards;
+    float: left;
+}
+@keyframes floatInGameDesc{
+    from{
+        transform:translateX(-100px);
+        opacity: 0;
+    }
+    to{
+        transform:translateX(0px);
+        opacity: 1;
+    }
+}
+#creatorDesc{
+    animation: floatInCreatorDesc 1.3s forwards;
+    float: right;
+}
+@keyframes floatInCreatorDesc{
+    from{
+        transform:translateX(100px);
+        opacity: 0;
+    }
+    to{
+        transform:translateX(0px);
+        opacity: 1;
+    }
 }
 .playtime{
     display: none;

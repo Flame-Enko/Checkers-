@@ -11,9 +11,21 @@
 
     <div id="header" class="intro">Witamy w Super Checkers!</div>
     <div id="desc1" class="intro">Łatwa i szybka gra w warcaby na jednem komputerze.</div>
-    <div id="play" class="buttonMenu" class="intro" onclick="play()">zagrać</div>
-    <div id="info" class="buttonMenu" class="intro" onclick="info()">info</div>
-    <div id="desc2">(rules, about cosmetics, about us)</div>
+    <div id="gameDesc" class="descInfo" onclick="hide1()"><i>(kliknij, aby ukryć)</i>
+        <div style="font-size: 25px; text-align: center;"><b>O grze:</b></div>
+        <div class="descContent"><b>Zasady gry:</b> pierwszy ruch dla białych. Kliknij figurę, aby wybrać ruch. Dozwolone ruchy będą zaznaczone na zielono. <b>Twoim celem jest usunięcie wzystkich wrogich figur z pola.</b> Aby zbić figurę, musisz ją przeskoczyć. Nie da się nie zbić, gdy nadarzy się taka okazja. Figury, które dotrą do końca, stają się królami. Królowie mogą poruszać się po wszystkich przekątnych bez ograniczeń (nie można przeskakiwać własnych figur). Możesz zbić kilka figur w jednym ruchu, więc rozstawiaj je mądrze. Miłej gry!</div>
+    </div>
+    <div id="buttons">
+        <div id="play" class="buttonMenu" class="intro" onclick="play()">zagrać</div>
+        <div id="info" class="buttonMenu" class="intro" onclick="info()">info</div>
+    </div>
+    <div id="creatorDesc" class="descInfo" onclick="hide2()"><i>(kliknij, aby ukryć)</i>
+        <div style="font-size: 25px; text-align: center;"><b>O nas:</b></div>
+        <div class="descContent"><b>Oleksandr Sinitskyi:</b> CSS, skrypt dla UI<br><br><br>
+        <b>Yaraslau Dubovik:</b> skrypt & HTML dla gry<br><br><br>
+        <b>Oleksii Makarchuk:</b> dokumentowanie pracy
+        </div>
+    </div>
 
     <div id="arena" class="playtime">
         <div id="status"></div>
